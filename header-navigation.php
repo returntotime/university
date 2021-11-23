@@ -2,7 +2,7 @@
 global $global_nav_style;
 $nav_style = $global_nav_style?$global_nav_style:ot_get_option('nav_style','1');
 $nav_sticky = ot_get_option('nav_sticky');
-#die('sadasdasd');
+
 ?>
 			<div id="top-nav" class="dark-div nav-style-<?php echo $nav_style ?>">
                 <nav class="navbar navbar-inverse main-color-1-bg" role="navigation">
@@ -11,14 +11,7 @@ $nav_sticky = ot_get_option('nav_sticky');
                         <div class="top-menu">
                             <ul class="nav navbar-nav hidden-xs">
                               <?php
-									if(has_nav_menu( 'secondary-menus' )){
-										wp_nav_menu(array(
-											'theme_location'  => 'secondary-menus',
-											'container' => false,
-											'items_wrap' => '%3$s',
-											'walker'=> new custom_walker_nav_menu()
-										));	
-									}
+									   
 								?>
                             </ul>
                             <button type="button" class="mobile-menu-toggle visible-xs">

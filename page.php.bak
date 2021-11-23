@@ -16,7 +16,7 @@ $page_content = get_post_meta(get_the_ID(),'page_content',true);
         	<div class="content-pad-3x">
             <?php }?>
                 <div class="row">
-                    <div id="content-none" class="<?php echo ($layout != 'full' && $layout != 'true-full')?'col-md-9':'col-md-12' ?><?php echo ($layout == 'left') ? " revert-layout":"";?>" role="main">
+                    <div id="content" class="<?php echo ($layout != 'full' && $layout != 'true-full')?'col-md-9':'col-md-12' ?><?php echo ($layout == 'left') ? " revert-layout":"";?>" role="main">
                         <article class="single-page-content">
                         	<?php
 							// The Loop

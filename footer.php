@@ -46,7 +46,9 @@
                     </div>
                     <div class="row footer-content">
                         <div class="copyright col-md-6">
-                       		<?php if(ot_get_option('copyright')){  echo ot_get_option('copyright');  } else {echo __('WordPress Theme by (C) CactusThemes','cactusthemes'); }?>
+                       		<?php if(ot_get_option('copyright')) {
+								echo ot_get_option('copyright'); 
+							} ?>
                         </div>
                         <nav class="col-md-6 footer-social">
                         	<?php 

@@ -13,7 +13,7 @@ get_header();
         	<div class="content-pad-3x">
             <?php }?>
                 <div class="row">
-                    <div id="content" class="<?php echo $layout!='full'?'col-md-9':'col-md-12' ?><?php echo ($layout == 'left') ? " revert-layout":"";?>" role="main">
+                    <div id="content-none" class="<?php echo $layout!='full'?'col-md-9':'col-md-12' ?><?php echo ($layout == 'left') ? " revert-layout":"";?>" role="main">
                         <article class="single-post-content single-content">
                         	<?php
 							// The Loop
