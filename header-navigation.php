@@ -11,7 +11,14 @@ $nav_sticky = ot_get_option('nav_sticky');
                         <div class="top-menu">
                             <ul class="nav navbar-nav hidden-xs">
                               <?php
-									   
+									if(has_nav_menu( 'secondary-menus' )){
+										wp_nav_menu(array(
+											'theme_location'  => 'secondary-menus',
+											'container' => false,
+											'items_wrap' => '%3$s',
+											'walker'=> new custom_walker_nav_menu()
+										));	
+									} 
 								?>
                             </ul>
                             <button type="button" class="mobile-menu-toggle visible-xs">
@@ -65,7 +72,7 @@ $nav_sticky = ot_get_option('nav_sticky');
                 </nav>
             </div><!--/top-nap-->
             <div id="main-nav" class="dark-div nav-style-<?php echo $nav_style ?>">
-                <nav class="navbar navbar-inverse main-color-2-bg" role="navigation">
+                <nav class="navbar navbar-inverse1 main-color-2-bg1" role="navigation">
                     <div class="container">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
@@ -105,24 +112,18 @@ $nav_sticky = ot_get_option('nav_sticky');
                             <?php }
 							}?>
 							
-							<?php if(is_active_sidebar('navigation_sidebar')){
-								dynamic_sidebar('navigation_sidebar');
-							} else { ?>
+							<?php //if(is_active_sidebar('navigation_sidebar')){
+								//dynamic_sidebar('navigation_sidebar');
+							//} //else { ?>
                             <ul class="nav navbar-nav navbar-right">
+								
                             	<?php
 									if(has_nav_menu( 'primary-menus' )){
-										wp_nav_menu(array(
-											'theme_location'  => 'primary-menus',
-											'container' => false,
-											'items_wrap' => '%3$s',
-											'walker'=> new custom_walker_nav_menu()
-										));	
-									}else{?>
-										<li><a href="<?php echo home_url(); ?>"><?php _e('Home','cactusthemes') ?> <span class="menu-description"><?php _e('Home page','cactusthemes') ?></span></a></li>
-										<?php wp_list_pages('depth=1&number=4&title_li=' ); ?>
-								<?php } ?>
+										ubermenu( 'main' ); 
+									}
+								?>
                             </ul>
-							<?php } ?>
+							<?php //} ?>
                             <?php 
 							$nav_logo_sticky = ot_get_option('nav_logo_sticky');
 							if($nav_logo_sticky=='2'){
