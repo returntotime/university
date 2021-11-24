@@ -1,0 +1,49 @@
+<?xml version='1.0'?> 
+<options>
+	<tab label="General" icon="cog">
+		<group>
+			<fields label="Univer Slug">
+				<option id="uuniver-slug" type="textfield" width="400" default="Univer"></option>
+				<description>Change univer slug. Remember to save the permalink settings again in Settings > Permalinks</description>
+			</fields>
+			<fields label="Univer Categories Slug">
+				<option id="uuniver-cat-slug" type="textfield" width="100" default=""></option>
+				<description>Change univer categories slug. Remember to save the permalink settings again in Settings > Permalinks</description>
+			</fields>
+			<fields label="Default Metadata">
+				<option id="uuniver-defmeta" type="textarea" cols="53" rows="3" default=""></option>
+				<description>Define default metadata for all univers, ex: Client, Services...</description>
+			</fields>
+			<fields label="Filter bar">
+				<option id="uuniver-filter" type="select" default="slide" tooltip="" >
+					<select value="0" text="Enable"/>
+					<select value="1" text="Disable"/>
+				</option>
+				<description>Enable filter bar</description>
+			</fields>
+		</group>
+	</tab>
+	<tab label="Single Univer" icon="cog">
+		<group>
+			<fields label="Sidebar">
+				<option id="u-univer-layout" type="select" default="full" tooltip="" >
+					<select value="full" text="Full Width"/>
+					<select value="right" text="Sidebar Right"/>
+					<select value="left" text="Sidebar left"/>
+				</option>
+				<description>Select default layout for single univer pages </description>
+			</fields>
+			<fields label="Related Univer">
+				<description></description>
+				<option id="uuniver-rel-number" label="Number of items" type="textfield" width="100" default="4"></option>
+			</fields>	
+			<fields label="Univer navigation">
+				<option id="uuniver-next-pre" type="select" default="all" tooltip="" >
+					<select value="all" text="All univers "/>
+					<select value="cat" text="Same category"/>
+				</option>
+				<description>Choose which univer to navigate when in a single univer page</description>
+			</fields>	
+		</group>
+	</tab>
+</options>
